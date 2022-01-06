@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<title>Build MyWeb</title>
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.carousel img {
+        
+        width:100% !important;
+        min-width:100 !important;
+        height: auto;
+        
+    }
+
+
+.navbar {
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(236,243,248,255);
+    color:black;
+    z-index: 1;
+}
+
+.brand-title {
+    font-size: 1.5rem;
+    margin: .5rem;
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color:rgba(19,41,73,255);
+    padding: 1rem;
+}
+
+
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color:rgba(19,41,73,255);
+    border-radius: 10px;
+}
+
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+    .innerbox{
+
+        transition: all 0.5s;
+      flex: 1 0 100%;
+      min-height:25vh;
+      justify-content: center;
+      margin-left: 25%;
+      margin-bottom: 5px;
+      align-items: center;
+    }
+   
+
+    .carousel img {
+        
+        width:100% !important;
+        min-width:100 !important;
+        height: 250px !important;
+        
+    }
+   
+}
+
+
+.txtcontent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+
+
+.form1{
+        margin-top: 70px;
+        display: flex;
+        border: 2px solid whitesmoke;
+        width: 80vw;
+        margin-bottom: 50px;
+        flex-direction: column;
+      }
+.control-label{
+        text-align: center;
+         width:100%;
+            
+        }
+
+.btn{
+     width:100px;
+     margin-top: 10px;
+     margin-left: 40%;
+     }
+
+ .flexcontainer{
+    display: flex;
+    flex-flow:row wrap;
+    margin-bottom: 30px;justify-content: center;
+      align-items: center;
+  }
+
+  .innerbox{
+    flex:1 0 33%;
+     min-height: 33.33vh;
+     
+    }
+
+
+  .fm {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color:rgba(236,243,248,255);
+}
+
+
+
+
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+
+    <nav class="navbar">
+        <a href="#"><img src="./images/buildlogo.png" style="height: 35px;width: 60px;"></a>
+        <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#form1">Register</a></li>
+            <li><a href="#mentor">Mentors</a></li>
+            <li><a href="#table1">Participants</a></li>
+          </ul>
+        </div>
+      </nav>
+<div class="content-body">
+<div class="main" style="margin-top: 100px;">
+
+<!-- CAROUSAL -->
+
+<div id="demo" class="carousel slide" data-ride="carousel" style="margin-top: 100px;">
+    <ul class="carousel-indicators">
+      <li data-target="#demo" data-slide-to="0" class="active"></li>
+      <li data-target="#demo" data-slide-to="1"></li>
+      <li data-target="#demo" data-slide-to="2"></li>
+    </ul>
+    <div class="carousel-inner" role="listbox" style=" width:100%; height: 500px !important;">
+      <div class="carousel-item active">
+        <img src="./images/carfinal.png" alt="BuilMyWeb"  height="500">
+      </div>
+      <div class="carousel-item">
+        <img src="./images/carousel.png" alt="BuilMyWeb2"  height="500">
+      </div>
+      <div class="carousel-item">
+        <img src="./images/carousel2.png" alt="BuilMyWeb3"  height="500">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+  </div>  
+</div>
+
+  <!-- TEXTCONTENT -->
+
+
+<div class="txtcontent">
+    <h1>Join us</h1>
+    <p style="margin: 10px;">Pygrammers is a community of python enthusiasts with similar ideologies and interest</p>
+    <a href="https://t.me/pygrammers_official" target="_blank"><button type="button" class="btn btn-primary" style="margin: 10px;">Telegram</button></a>
+  </div >
+  
+
+  <!-- FORM -->
+
+
+  <div class="fm" id="form1">
+  
+  <form action="#" class="form1" >
+      <h1 style="width: 100%;text-align: center;">Form:</h1>
+      <div class="form-group">
+          <label for="fname" class="control-label">Name</label>
+          <input type="text" class="form-control" id="fname" required>
+      </div>
+      <div class="form-group">
+          <label for="lname" class="control-label">Mobile Number</label>
+          <input type="text" class="form-control" id="lname" required>
+      </div>
+      <div class="form-group">
+          <label for="email" class="control-label">Email <address></address></label>
+          <input type="email" class="form-control" id="email" required>
+      </div>
+      <div class="form-group">
+          <label for="password" class="control-label">Company / Institution Name</label>
+          <input type="text" class="form-control" id="password" required>
+      </div>
+      <div class="form-group">
+          <label for="exampleFormControlFile1">Upload a short cideo or image of handwritten sheet showing your intrest in join build.myweb</label>
+          <input type="file" class="form-control-file" id="exampleFormControlFile1" required>
+        </div>
+     
+      
+      <select class="form-select" aria-label="Default select example" required>
+          <option selected>Have you attended any events by Pygrammers before?</option>
+          <option value="1">Yes</option>
+          <option value="2">No</option>
+          <option value="3">Not Sure!</option>
+        </select>
+        <button type="submit" class="btn btn-primary">Sign up</button>
+      </form>
+  
+
+    
+
+      <!-- CARDS -->
+
+
+
+
+    <p id="mentor"><h1>Mentors</h1></p>
+    <div class="flexcontainer">
+        <div class="innerbox">
+            <div class="card" style="width:200px; height:370px; ">
+                <img class="card-img-top" src="./images/elon.jpg" alt="Card image" style="width:100%">
+                <div class="card-body">
+                  <h4 class="card-title">Elon musk</h4>
+                  <p class="card-text">CEO and Product Architect of Tesla, Inc.</p>
+                  
+                </div>
+              </div>
+        </div>
+
+        <div class="innerbox">
+            <div class="card" style="width:200px; height:370px">
+                <img class="card-img-top" src="./images/elon.jpg" alt="Card image" style="width:100%">
+                <div class="card-body">
+                  <h4 class="card-title">Elon musk</h4>
+                  <p class="card-text">CEO and Product Architect of Tesla, Inc.</p>
+                  
+                </div>
+              </div>
+        </div>
+
+
+        <div class="innerbox">
+            <div class="card" style="width:200px; height:370px">
+                <img class="card-img-top" src="./images/elon.jpg" alt="Card image" style="width:100%">
+                <div class="card-body">
+                  <h4 class="card-title">Elon musk</h4>
+                  <p class="card-text">CEO and Product Architect of Tesla, Inc.</p>
+                  
+                </div>
+              </div>
+        </div>
+
+        <div class="innerbox">
+            <div class="card" style="width:200px; height:370px">
+                <img class="card-img-top" src="./images/elon.jpg" alt="Card image" style="width:100%">
+                <div class="card-body">
+                  <h4 class="card-title">Elon musk</h4>
+                  <p class="card-text">CEO and Product Architect of Tesla, Inc.</p>
+                  
+                </div>
+              </div>
+        </div>
+        <div class="innerbox">
+            <div class="card" style="width:200px; height:370px">
+                <img class="card-img-top" src="./images/elon.jpg" alt="Card image" style="width:100%">
+                <div class="card-body">
+                  <h4 class="card-title">Elon musk</h4>
+                  <p class="card-text">CEO and Product Architect of Tesla, Inc.</p>
+                  
+                </div>
+              </div>
+        </div>
+        <div class="innerbox">
+            <div class="card" style="width:200px; height:370px">
+                <img class="card-img-top" src="./images/elon.jpg" alt="Card image" style="width:100%">
+                <div class="card-body">
+                  <h4 class="card-title">Elon musk</h4>
+                  <p class="card-text">CEO and Product Architect of Tesla, Inc.</p>
+                  
+                </div>
+              </div>
+        </div>
+
+
+      </div>
+
+    <!-- PARTICIPANT TABLE -->
+    <h1 style="margin-top: 4em;" id="table1">Participants</h1>
+    <table class="table table-striped" style="width: 60%;margin: 4em;">
+      <thead>
+        <tr>
+          
+          <th scope="col">Sl.No</th>
+          <th scope="col">Name</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          
+          <td>1</td>
+          <td>Alan</td>
+        </tr>
+        <tr>
+          
+          <td>2</td>
+          <td>jijo</td>
+          
+        </tr>
+        <tr>
+          
+          <td>3</td>
+          <td>Rahan</td>
+        </tr>
+        
+        <tr>
+          
+          <td>3</td>
+          <td>Akarsh</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+
+
+
+
+
+
+    <!-- FOOTER -->
+
+
+<div class="footer">
+    <a href="https://t.me/pygrammers_official" target="_blank"><img src="./images/footer.png" style="height: 50px; width: 50;"></a>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- JAVSCRIPT CODES -->
+
+<script>
+const toggleButton = document.getElementsByClassName('toggle-button')[0]
+const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+const contentbody = document.getElementsByClassName('content-body')[0]
+
+toggleButton.addEventListener('click', () => {
+    console.log("hi")
+  navbarLinks.classList.toggle('active')
+})
+
+// contentbody.addEventListener('click', () => {
+//     console.log("hi2")
+//   navbarLinks.classList.remove('active')
+//  })
+
+
+</script>
+
+</body>
+
+</html>
